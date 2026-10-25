@@ -1,0 +1,22 @@
+PASS: database-backed health endpoint
+PASS: anonymous data access is blocked
+PASS: cross-origin mutation is blocked
+PASS: manager and owner credentials login
+PASS: persistent demo records load through authenticated API
+PASS: client, catalogue and discounted booking save persistently
+PASS: HTTP duplicate submission produces one receipt
+PASS: excess payment is rejected through HTTP
+PASS: future transaction date is rejected
+PASS: advance → completion → balance receipt → refund reconciles end to end
+PASS: expense accrual and duplicate-proof settlement
+PASS: every business mutation endpoint rejects owner writes
+PASS: owner can read the workspace
+PASS: authenticated CSV export
+PASS: Excel export downloads and parses as a real workbook
+PASS: unsafe upload format is rejected
+PASS: evidence persists and requires authentication to download
+PASS: logout revokes server sessions
+
+18 HTTP workflow checks passed. Test records remain in this isolated demo.
+
+HTTP_SMOKE_EXIT=0

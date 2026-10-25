@@ -1,0 +1,46 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> salonos-finance-manager@0.1.0 test
+> node --import tsx --test --test-concurrency=1 tests/*.test.ts
+
+✔ money uses integer minor units and rejects malformed amounts (1621.240921ms)
+✔ Pakistan and international phone normalization (0.423329ms)
+✔ secure password hashing and verification (105.387038ms)
+✔ credentials login creates and revokes an opaque server session (87.115789ms)
+✔ owner writes are rejected by business services (0.758365ms)
+✔ duplicate normalized clients cannot be inserted (19.388425ms)
+✔ invalid required fields are rejected (2.238598ms)
+✔ discounts and multiple service quantities calculate correctly (40.831892ms)
+✔ service price updates preserve historical booking snapshots (28.294143ms)
+✔ advances create a liability, not earned revenue (39.2538ms)
+✔ partial payments and completion recognize correct revenue and receivable (54.104197ms)
+✔ overpayments fail without adding ledger or payment records (38.358619ms)
+✔ duplicate submission is idempotent and changed payload conflicts (27.062414ms)
+✔ concurrent receipts cannot overpay a booking (33.940273ms)
+✔ unverified payments have no balance or ledger effect until verified (51.329231ms)
+✔ completed service refunds create credits without inflating receivables (77.066043ms)
+✔ cancelled bookings retain refundable advances without sales revenue (55.737112ms)
+✔ refund limits and duplicate corrections are enforced (35.220333ms)
+✔ reversing an advance after completion reopens receivables, not negative advances (53.674018ms)
+✔ future payment dates and invalid calendar dates are rejected (17.667809ms)
+✔ completed booking invoices are locked (27.075188ms)
+✔ stale simultaneous edits fail with version conflict (10.720928ms)
+✔ capital purchases are assets and do not reduce operating profit (29.189403ms)
+✔ unpaid expense accrues once and settlement does not duplicate costs (52.965014ms)
+✔ expense reversal restores accounting but retains original record (49.098474ms)
+✔ direct costs require a booking link (2.928329ms)
+✔ database rejects unbalanced journal writes at commit (4.203573ms)
+✔ ledger and audit history cannot be overwritten or deleted (6.523724ms)
+✔ all journals balance and customer subledger reconciles to control accounts (12.779663ms)
+✔ reports use actual database entries and P&L excludes customer advances (17.157519ms)
+✔ one-paisa discounts are allocated without rounding drift (0.785535ms)
+✔ unverified reports can be rejected without creating financial activity (38.950733ms)
+✔ simultaneous identical submissions return the same transaction (20.279009ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3592.755424

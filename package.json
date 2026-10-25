@@ -1,0 +1,55 @@
+{
+  "name": "salonos-finance-manager",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "next build --webpack",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "node --import tsx scripts/migrate.ts",
+    "db:seed": "node --import tsx scripts/seed.ts",
+    "demo:setup": "node --import tsx scripts/demo-setup.ts",
+    "user:create": "node --import tsx scripts/create-user.ts",
+    "test": "node --import tsx --test --test-concurrency=1 tests/*.test.ts",
+    "test:http": "node --import tsx scripts/http-smoke.ts",
+    "verify:ledger": "node --import tsx scripts/verify-ledger.ts",
+    "demo:reset": "node --import tsx scripts/demo-reset.ts",
+    "dev:smoke": "node scripts/dev.mjs --smoke",
+    "format": "prettier --write src scripts tests docs README.md package.json tsconfig.json next.config.ts postcss.config.mjs docker-compose.yml render.yaml",
+    "format:check": "prettier --check src scripts tests docs README.md package.json tsconfig.json next.config.ts postcss.config.mjs docker-compose.yml render.yaml"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "0.5.11",
+    "@tailwindcss/postcss": "^4.1.0",
+    "drizzle-orm": "0.45.4",
+    "exceljs": "^4.4.0",
+    "lucide-react": "^0.577.0",
+    "next": "16.4.3",
+    "pg": "8.23.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "3.10.1",
+    "tailwindcss": "^4.1.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.15.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "dotenv": "^17.2.0",
+    "prettier": "3.9.10",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "type": "module",
+  "overrides": {
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
+  }
+}
