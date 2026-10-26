@@ -28,14 +28,14 @@ Health path: `/api/health`. It checks the database and returns only ready/error 
 
 Set these environment variables in the hosting service, never in source:
 
-| Variable         | Value                                                                                         |
-| ---------------- | --------------------------------------------------------------------------------------------- |
-| `DATABASE_URL`   | The PostgreSQL connection string from the attached database                                   |
-| `DATABASE_SSL`   | `true` for TLS with certificate validation; follow the provider's connection/TLS requirements |
-| `APP_ORIGIN`     | Exact HTTPS browser origin, including the correct host, with no path                          |
-| `SESSION_SECRET` | Unique random secret, minimum 32 characters                                                   |
-| `DEMO_MODE`      | `false` for a clean production database                                                       |
-| `NODE_VERSION`   | `22`                                                                                          |
+| Variable         | Value                                                                                                                                                    |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `DATABASE_URL`   | The PostgreSQL connection string from the attached database                                                                                              |
+| `DATABASE_SSL`   | `true` for TLS with certificate validation; follow the provider's connection/TLS requirements                                                            |
+| `APP_ORIGIN`     | Exact HTTPS browser origin, including the correct host, with no path. For the current Render service: `https://sana-salon-software-backend.onrender.com` |
+| `SESSION_SECRET` | Unique random secret, minimum 32 characters                                                                                                              |
+| `DEMO_MODE`      | `false` for a clean production database                                                                                                                  |
+| `NODE_VERSION`   | `22`                                                                                                                                                     |
 
 The blueprint connects over Render's internal database network and leaves `DATABASE_SSL=false`. Render documents different TLS requirements for internal and external connections; review its current instructions before changing the connection URL/SSL configuration. Never add `rejectUnauthorized:false` as a general workaround for TLS errors.
 
