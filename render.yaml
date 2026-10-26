@@ -21,7 +21,7 @@ services:
       - key: SESSION_SECRET
         generateValue: true
       - key: APP_ORIGIN
-        value: https://salonos.onrender.com
+        value: https://sana-salon-software-backend.onrender.com
 databases:
   - name: salonos-postgres
     databaseName: salonos
